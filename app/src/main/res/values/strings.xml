@@ -3,4 +3,7 @@
     <string name="title">"Flashcard Generator"</string>
     <string name="b_test">"TEST"</string>
     <string name="a_flashcards">"Flashcards"</string>
+    <string name="py_flashcards">"shi4"</string>
+    <string name="cc_flashcards">"试"</string>
+    <string name="def_flashcards">"test, experiment, examination, to test, to try"</string>
 </resources>

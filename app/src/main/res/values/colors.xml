@@ -3,4 +3,5 @@
     <color name="background">#008577</color>
     <color name="prim_text">#DB7D14</color>
     <color name="sec_text">#673AB7</color>
+    <color name="flashcard">#E4DCDC</color>
 </resources>

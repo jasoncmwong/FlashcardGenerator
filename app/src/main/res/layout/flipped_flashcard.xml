@@ -16,8 +16,7 @@
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/flashcard"
@@ -32,53 +31,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.9"
-        />
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
-        android:id="@+id/py"
+        android:id="@+id/def"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center_horizontal"
-        android:text="@string/py_flashcards"
-        android:textSize="40sp"
+        android:gravity="center"
+        android:text="@string/def_flashcards"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@id/flashcard"
         app:layout_constraintEnd_toEndOf="@id/flashcard"
-        app:layout_constraintBottom_toBottomOf="@id/cc_guideline"
-        app:layout_constraintTop_toTopOf="@id/py_guideline"
-        />
-
-    <TextView
-        android:id="@+id/cc"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_horizontal"
-        android:text="@string/cc_flashcards"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="@id/flashcard"
-        app:layout_constraintEnd_toEndOf="@id/flashcard"
-        app:layout_constraintTop_toTopOf="@id/cc_guideline"
         app:layout_constraintBottom_toBottomOf="@id/flashcard"
-        />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/py_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3"
-        />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/cc_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6"
+        app:layout_constraintTop_toTopOf="@id/flashcard"
         />
 
     <TextView
-        android:id="@+id/debug_default"
+        android:id="@+id/debug_flip"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
