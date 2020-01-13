@@ -2,6 +2,7 @@
     <string name="app_name">Flashcard Generator</string>
     <string name="title">"Flashcard Generator"</string>
     <string name="b_test">"TEST"</string>
+    <string name="b_import">"IMPORT"</string>
     <string name="a_flashcards">"Flashcards"</string>
     <string name="py_flashcards">"shi4"</string>
     <string name="cc_flashcards">"试"</string>

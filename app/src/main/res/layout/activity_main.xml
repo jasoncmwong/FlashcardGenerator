@@ -34,4 +34,33 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         />
 
+    <Button
+        android:id="@+id/b_import"
+        android:text="@string/b_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/sec_text"
+        android:onClick="importPress"
+        app:layout_constraintTop_toBottomOf="@+id/b_test"
+        app:layout_constraintStart_toStartOf="@+id/b_test"
+        app:layout_constraintEnd_toEndOf="@+id/b_test"
+        />
+
+    <TextView
+        android:id="@+id/debug_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/sec_text"
+        app:layout_constraintTop_toBottomOf="@+id/b_import"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
