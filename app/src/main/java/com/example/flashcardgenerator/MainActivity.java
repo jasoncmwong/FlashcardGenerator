@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String[]> words = new ArrayList<String[]>();
+    ArrayList<String[]> cardData = new ArrayList<String[]>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testPress(View view) {
-        Intent intent = new Intent(this, TestFlashcard.class);
-        if (words.isEmpty()) {  // .csv file not imported
+        if (cardData.isEmpty()) {  // .csv file not imported
             TextView debugView = findViewById(R.id.debug_text);
             debugView.setText("ERROR: No .csv file imported - import a .csv file first");
         } else {
+            Intent intent = new Intent(this, TestFlashcard.class);
+            intent.putExtra("FLASHCARD_DATA", cardData);
             startActivity(intent);
         }
     }
@@ -43,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
             String path = Environment.getExternalStorageDirectory().getPath();
             String csvPath = path + "/Download/flashcard-data.csv";
             CSVReader csv = new CSVReader();
-            words = csv.readCSV(csvPath);
-            String[] titles = words.get(0);
+            cardData = csv.readCSV(csvPath);
+            String[] titles = cardData.get(0);
             TextView debugView = findViewById(R.id.debug_text);
             debugView.setText(Arrays.toString(titles));
         }

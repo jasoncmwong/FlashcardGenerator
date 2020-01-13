@@ -9,14 +9,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class TestFlashcard extends AppCompatActivity {
 
     public static boolean cardFlipped = false;
+    ArrayList<String[]> cardData = new ArrayList<String[]>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_flashcard);
+        Intent intent = getIntent();
+        cardData = (ArrayList<String[]>) intent.getSerializableExtra("FLASHCARD_DATA");
+        TextView topRow = findViewById(R.id.top_row);
+        TextView botRow = findViewById(R.id.bot_row);
+        topRow.setText(cardData.get(1)[0]);
+        botRow.setText(cardData.get(1)[1]);
     }
 
     public void flipCard(View v) {
@@ -24,13 +33,15 @@ public class TestFlashcard extends AppCompatActivity {
             cardFlipped = false;
             TextView topRow = findViewById(R.id.top_row);
             TextView botRow = findViewById(R.id.bot_row);
-            topRow.setText(getResources().getString(R.string.py_flashcards));
-            botRow.setText(getResources().getString(R.string.cc_flashcards));
+            topRow.setText(cardData.get(1)[0]);
+            topRow.setTextSize(40);
+            botRow.setText(cardData.get(1)[1]);
         } else {
             cardFlipped = true;
             TextView topRow = findViewById(R.id.top_row);
             TextView botRow = findViewById(R.id.bot_row);
-            topRow.setText(getResources().getString(R.string.def_flashcards));
+            topRow.setText(cardData.get(1)[2]);
+            topRow.setTextSize(20);
             botRow.setText("");
         }
     }
