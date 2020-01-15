@@ -20,6 +20,24 @@ public class TestFlashcard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_flashcard);
+        View flashcard = findViewById(R.id.flashcard);
+        flashcard.setOnTouchListener(new OnSwipeTouchListener() {
+            @Override
+            public void onSwipeLeft() {
+                TextView topRow = findViewById(R.id.top_row);
+                TextView botRow = findViewById(R.id.bot_row);
+                topRow.setText(cardData.get(2)[0]);
+                botRow.setText(cardData.get(2)[1]);
+            }
+
+            @Override
+            public void onSwipeRight() {
+                TextView topRow = findViewById(R.id.top_row);
+                TextView botRow = findViewById(R.id.bot_row);
+                topRow.setText(cardData.get(0)[0]);
+                botRow.setText(cardData.get(0)[1]);
+            }
+        });
         Intent intent = getIntent();
         cardData = (ArrayList<String[]>) intent.getSerializableExtra("FLASHCARD_DATA");
         TextView topRow = findViewById(R.id.top_row);
