@@ -3,8 +3,11 @@
     <string name="title">"Flashcard Generator"</string>
     <string name="b_test">"TEST"</string>
     <string name="b_import">"IMPORT"</string>
+    <string name ="b_random">"RANDOM"</string>
     <string name="a_flashcards">"Flashcards"</string>
     <string name="py_flashcards">"shi4"</string>
     <string name="cc_flashcards">"试"</string>
     <string name="def_flashcards">"test, experiment, examination, to test, to try"</string>
+    <string name="card_index">"%d"</string>
+    <string name="num_cards">" / %d"</string>
 </resources>
